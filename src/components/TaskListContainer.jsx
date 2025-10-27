@@ -6,7 +6,7 @@ import useTaskStore from "@/store/useTaskStore";
 const TaskListContainer = () => {
    const { tasks } = useTaskStore();
    return (
-      <div className="flex flex-col gap-3 h-96 lg:h-80 2xl:h-[35rem] overflow-auto hsb">
+      <div className="flex flex-col gap-3 max-h-[calc(100vh-12rem)] md:max-h-[calc(100vh-16rem)] overflow-y-auto hsb">
          {tasks.map((task) => (
             <TaskList key={task.id} task={task} />
          ))}
